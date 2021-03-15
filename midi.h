@@ -9,8 +9,8 @@ class MidiController {
         MidiController();
         void callback(double timeStamp, std::vector<unsigned char>* message);
     private:
-        std::unique_ptr<RtMidiIn> midiInput;
-        std::unique_ptr<RtMidiOut> midiOutput;
+        RtMidiIn midiInput;
+        RtMidiOut midiOutput;
 };
 
 #endif
